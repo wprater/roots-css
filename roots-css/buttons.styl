@@ -103,13 +103,13 @@ button(color = default-color, size = "medium", textColor = null, shadowColor = n
   parsed_size = parse(size)
 
   // now that we've got numbers, let's work some proportions
-  height = (parsed_size*1.53px)/2
-  width = ((parsed_size*1.53px)*2.2)/2
+  height = rpx(parsed_size * 2)
+  width = rpx(parsed_size * 2)
 
   // dynamically calculated styles
-  font-size: unit(parsed_size, px)
-  padding: unit(height, px) unit(width, px)
-  border-radius: (parsed_size/4.33333px)
+  font-size: rpx(unit(parsed_size, px))
+  padding: rpx(8) rpx(20)
+  border-radius: rpx(3)
   simple-noise-gradient(color)
   text-shadow: 1px 1px 1px shadowColor
   border: s('1px solid %s', darken(color, 10%))
