@@ -24,6 +24,12 @@ paragraph(size = font-size, margins = true, width = false)
   line-height: 1.6em
   font-size: unit(size, px)
 
+ellipsis(no-wrap = true)
+  if no-wrap
+    white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
 // Mixin: Fs
 // An alias for 'font-size'
 // ex. fs: 16px
