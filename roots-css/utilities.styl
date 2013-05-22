@@ -4,6 +4,11 @@
 
 ie-support ?= true
 
+// Helper: Rem conversion
+// Relative pixels from a font base
+rpx(measure, remBase = 10px)
+  unit(measure / remBase, rem)
+
 // Helper: Pie
 // When turned on, enables css3 pie (http://css3pie.com/) for all
 // elements that can use it. Which makes IE look a lot nicer.
